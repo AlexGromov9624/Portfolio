@@ -1,0 +1,282 @@
+// Расширение ноутбуков от 1440
+@media (max-width: 1439px) {
+    .sidepanel{
+        display: none;
+    }
+}
+//  расширение маленьких ноутбуков
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .about{
+        &__wrapper{
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+        }
+        
+    }
+    .resume{
+        &__wrapper{
+            padding: 40px 20px 0 20px;
+            column-gap:80px;
+        }
+    }
+    .skills{
+        &__items{
+            grid-template: repeat(3,minmax(300px,auto)) / repeat(3,260px);
+            justify-content: center;
+        }
+        &__ratings {
+            margin-top: 100px;
+            grid-template: repeat(3,minmax(70px,auto))/repeat(2,350px);
+            justify-content: space-around;
+        } 
+    } 
+    .portfolio{
+        &__wrapper{
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-between;
+            row-gap: 35px;
+            .horizontal, .vertical{
+                grid-column: unset;
+                grid-row: unset;
+            }
+        }
+    }  
+    .contacts{
+        &__wrapper{
+            padding: 0;
+            grid-template-columns: 400px 550px;
+        }
+        &__form{
+            grid-template: 45px 190px 45px / repeat(2,260px);
+        }
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .title{
+        &_fz36{
+            font-size: 30px;
+        }
+    }
+    .about{
+        &__wrapper{
+            grid-template-columns: 320px 370px;
+        }
+        &__skills{
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px, auto);
+            &-item{
+                grid-template-columns: 40px 320px;
+                column-gap:20px;
+
+            }
+            &__ratings {
+                margin-top: 100px;
+                grid-template: repeat(3,minmax(70px,auto))/repeat(2,350px);
+
+            } 
+        }
+    }
+    .resume{
+        padding-top: 80px;
+        &__wrapper{
+            padding: 30px 0 0 0 ;
+            grid-template-columns: repeat(2,280px);
+            column-gap:120px;
+        }
+        &__column{
+            ul{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .skills{
+        margin-top: 100px;
+        .skills__items {
+            margin-top: 20px;
+            padding: 40px 20px 40px 20px;
+            grid-template: repeat(4,minmax(300px,auto))/repeat(2,260px);
+            justify-content: space-around;
+        }
+        &__ratings {
+            margin-top: 40px;
+            grid-template: repeat(3,minmax(70px,auto))/repeat(2,350px);
+            column-gap: unset;
+        } 
+    }
+    .price{
+        &__wrapper{
+            grid-template-columns: repeat(auto-fit, 350px);
+            padding: 0;
+            justify-content: space-between;
+        }
+    }
+    .contacts{
+        &__wrapper{
+            padding: 0;
+            grid-template-columns: 400px 300px;
+        }
+        &__form{
+            grid-template: 45px 45px 100px 45px/ 240px;
+        }
+        &__textarea {
+            grid-column: unset;
+        }
+    }
+}
+// проверяем на 577
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .title{
+        &_fz48{
+            font-size: 28px;
+        }
+    }
+    .divider{
+        margin: 15px auto 0 auto;
+    }
+    .promo{
+        padding-top: 250px;
+        background: url(../img/main_bg.jpg) no-repeat 80%/cover;
+        &__title{        
+            line-height: 39px;
+            width: 300px;
+        }
+    }
+    .about {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template: 400px auto auto / 1fr;
+        }
+        &__photo{
+             grid-row: unset;
+        }
+
+    }
+    .skills{
+        padding-top: 90px;
+        grid-template-columns: repeat(2, 260px);
+        &-item{
+            grid-template-columns: 40px 200px;
+            column-gap: 20px;
+        }
+        &__ratings {
+            margin-top: 40px;
+            grid-template: repeat(6,minmax(70px,auto))/repeat(1,350px);
+        } 
+    }
+    .resume{
+        padding-top: 60px;
+        &__wrapper{
+            grid-template-columns: 280px;
+            justify-content: center;
+            row-gap: 30px;
+        }
+    }
+    .portfolio{
+        padding-top: 40px;
+        &__wrapper{
+            justify-content: center;
+        }
+    }
+    .price{
+        padding-top: 40px;
+        &__wrapper{
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+    }
+    .contacts{
+        &__wrapper{
+            grid-template-columns: 400px;
+            justify-content: center;
+        }
+        &__deskr{
+            margin-top: 30px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .title{
+        &_fz48{
+            font-size: 26px;
+        }
+        &_fz36{
+            font-size: 24px;
+        }
+    }
+    .promo{
+        &__btns{
+            margin-top: 30px;
+        }
+    }
+    .hamburger{
+        right: 20px;
+    }
+    .menu{
+        &__block{
+            width: 250px;
+            padding-left: 20px;
+        }
+        
+        
+    }
+    .about{
+        &__wrapper{
+            grid-template: 340px auto auto / 1fr;
+        }
+        &__skills{
+            grid-template-columns: 1fr;
+        }
+    }
+    .skills{
+        padding-top: 60px; 
+        .skills__items {
+            padding: 0;
+            grid-template: repeat(4,minmax(300px,auto))/ 260px;
+        }
+        &__ratings{
+            grid-template: repeat(6,minmax(70px,auto))/repeat(1,290px);
+            &-item{
+                grid-template: minmax(30px,auto) 16px/270px 30px;
+            }
+            &-line{
+                width: 100%;
+            }
+        }
+        
+    }
+    .price{
+        &__wrapper{
+            grid-template-columns: repeat(auto-fit, 295px);
+        }
+        
+    }
+    .contacts{
+        &__wrapper{
+            grid-template-columns: 250px;
+            justify-content: center;
+        }
+        &__photo{
+            display: none;
+        }
+        &__deskr{
+            margin-top: 30px;
+        }
+    }
+    
+}
+
